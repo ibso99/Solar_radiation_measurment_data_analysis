@@ -4,6 +4,13 @@ import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="simple Dashboard", layout="wide")
 
+# Just add it after st.sidebar:
+a = st.sidebar.radio("Select one:", [1, 2])
+
+# Or use "with" notation:
+with st.sidebar:
+    st.radio("Select one:", [1, 2])
+    
 st.header("Option 1: Upload your csv file and plot Data")
 uploaded_file = st.file_uploader("Choose a csv file to upload", type="csv")
 
